@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutiee - Roupas Disponíveis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Cutiee</h1>
+        <nav>
+            <a href="form.html">Gerenciar Roupas</a>
+        </nav>
+    </header>
+    <main>
+        <section id="clothes-list">
+            <h2>Catálogo</h2>
+            <div id="list"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.github.com/marcuswitte" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2024 Marcus Witte</p>
+    </footer>
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <img src="img/i1.webp" alt="Roupa" id="overlay-image">
+            <div class="overlay-text">
+                <div class="overlay-top">
+                    <h3 id="overlay-name">Item Name</h3>
+                    <p id="overlay-description">Item Description</p>
+                </div>
+                <div class="overlay-bottom">
+                    <h5>Tamanhos Disponíveis:</h5>
+                    <h6 id="overlay-size">Item Size</h6>
+                    <h4>R$ <span id="overlay-price"></span></h4>
+                    <button id="buy-btn">Comprar</button>
+                </div>
+            </div>
+            <span class="close">&times;</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

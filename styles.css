@@ -1,0 +1,464 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #dddddd;
+    color: #333;
+}
+
+p {
+    font-weight: 300;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(218, 138, 151);
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header h1 {
+    font-family: "Sacramento", cursive;
+    font-size: 70px;
+    margin: 0;
+}
+
+#clothes-list h2 {
+    font-family: "Sacramento", cursive;
+    text-align: center;
+    font-size: 40px;
+    margin: 10px 0 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+h2 {
+    color: #a52a2a;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 0.5rem 0 0.2rem;
+}
+
+input, textarea, button {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: rgb(218, 138, 151);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(168, 107, 117);
+}
+
+section {
+    max-width: 90%;
+    padding-bottom: 20px;
+}
+
+#list {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.clothing-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-width: 408px;
+    width: 30%;
+    height: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.clothing-text {
+    padding: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.clothing-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: fill;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    flex: none;
+    
+}
+
+.clothing-item h3 {
+    margin-top: 5px;
+    font-size: 14px;
+    color: black;
+    font-weight: 300;
+}
+
+.clothing-item p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+}
+
+#clothes-list .clothing-item img:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.clothing-item p {
+    margin-bottom: 0.2rem 0;
+}
+
+#manage-clothes {
+    max-width: 80%;
+    width: 80%;
+    text-align: center;
+}
+
+#manage-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+#manage-list .clothing-item {
+    min-width: 0;
+    width: calc(20% - 1rem);
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    height: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+}
+
+#manage-list .clothing-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#manage-list .clothing-item button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+}
+
+#manage-list .clothing-item button:hover {
+    background-color: #ff4500;
+}
+
+footer {
+    background-color: rgb(218, 138, 151);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #e7e7e7;
+}
+
+footer .social-icons {
+    margin-bottom: 10px;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer .social-icons a:hover {
+    opacity: .7;
+}
+
+footer p {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay.show {
+    display: block;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    width: 75%;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    display: flex;
+}
+
+.overlay img {
+    width: 45%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.overlay-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 55%;
+}
+
+.overlay-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.overlay h3 {
+    margin: 0 0 10px;
+}
+
+.overlay p {
+    font-size: 14px;
+    margin: 0 0 40px;
+}
+
+.overlay h4 {
+    font-size: 25px;
+    margin: 0 0 20px;
+}
+
+.overlay h5 {
+    font-size: 15px;
+    margin: 0 0 20px;
+}
+
+.overlay h6 {
+    font-size: 15px;
+    margin: 0 0 20px;
+    font-weight: 300;
+}
+
+#buy-btn {
+    background-color: #5dc460;
+    color: white;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 0;
+}
+
+#buy-btn:hover {
+    background-color: #45a049;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#add-clothes {
+    width: 30%;
+    align-items: center;
+}
+
+#add-clothes h2{
+text-align: center;
+font-size: 30px;
+margin: 10px 0 20px;
+}
+
+textarea {
+    resize: none;
+    height: 128px;
+}
+
+@media only screen and (max-width: 1024px) {
+    section {
+        min-width: 80%;
+        max-width: 100%;
+        padding-bottom: 20px;
+    }
+
+    #list {
+        display: flex;
+        justify-content: center;
+    }
+
+    #list .clothing-item {
+        width: calc(50% - 1rem); 
+        margin-bottom: 0.2rem; 
+      }
+    
+    .clothing-item {
+        min-width: 0;
+        height: 270px;
+    }
+    
+    .clothing-text {
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .clothing-item img {
+        width: 100%;
+        height: 190px;       
+        flex: 1;
+    }
+
+    .overlay-content {
+        max-height: 80%;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .overlay img {
+        width: 100%;
+        max-height: 300px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    
+    .overlay-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .overlay-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .overlay h3 {
+        font-size: 20px;
+    }
+    
+    .overlay p {
+        font-size: 13px;
+        overflow: hidden;
+        margin: 0 0 10px;
+    }
+    
+    .overlay h4 {
+        font-size: 15px;
+    }
+    
+    .overlay h5 {
+        margin: 0 0 5px; 
+        font-size: 13px;
+    }
+
+    .overlay h6 {
+        margin: 0 0 10px;
+        font-size: 13px;
+    }
+
+    .close {
+        top: 5px;
+        right: 5px;
+    }
+
+    #manage-list .clothing-item {
+        width: calc(50% - 1rem);
+        height: 300px;
+    }
+  }
+
+  

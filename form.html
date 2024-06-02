@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutiee - Adicionar Roupa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Cutiee</h1>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <section id="add-clothes">
+            <h2>Adicionar Nova Roupa</h2>
+            <form id="clothes-form">
+                <label for="name">Nome da Roupa:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="image">Imagem (URL):</label>
+                <input type="url" id="image" name="image" required>
+
+                <label for="size">Tamanho:</label>
+                <input type="text" id="size" name="size" required>
+
+                <label for="description">Descrição:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <label for="price">Preço:</label>
+                <input type="text" id="price" name="price" required>
+
+                <button type="submit">Adicionar Roupa</button>
+            </form>
+        </section>
+        <section id="manage-clothes">
+            <h2>Gerenciar Roupas</h2>
+            <div id="manage-list"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.github.com/marcuswitte" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2024 Marcus Witte</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
